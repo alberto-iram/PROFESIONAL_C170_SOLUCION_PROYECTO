@@ -12,18 +12,18 @@ AFRAME.registerComponent("markerhandler", {
     });
   },
   handleMarkerFound: function(toys, markerId) {
-    // Changing button div visibility
+    // Cambia la visibilidad del botón div
     var buttonDiv = document.getElementById("button-div");
     buttonDiv.style.display = "flex";
 
     var orderButtton = document.getElementById("order-button");
     var orderSummaryButtton = document.getElementById("order-summary-button");
 
-    // Handling Click Events
+    // Usa los eventos de clic
     orderButtton.addEventListener("click", () => {
       swal({
         icon: "https://i.imgur.com/4NZ6uLY.jpg",
-        title: "Thanks For Order !",
+        title: "¡Gracias por tu orden!",
         text: "  ",
         timer: 2000,
         buttons: false
@@ -33,12 +33,12 @@ AFRAME.registerComponent("markerhandler", {
     orderSummaryButtton.addEventListener("click", () => {
       swal({
         icon: "warning",
-        title: "Order Summary",
-        text: "Work In Progress"
+        title: "Resumen de la orden",
+        text: "Operación en curso"
       });
     });
 
-    // Changing Model scale to initial scale
+    // CAmbia el tamaño del modelo a su escala inicial
     var toy = toys.filter(toy => toy.id === markerId)[0];
 
     var model = document.querySelector(`#model-${toy.id}`);
@@ -56,7 +56,7 @@ AFRAME.registerComponent("markerhandler", {
       });
   },
   handleMarkerLost: function() {
-    // Changing button div visibility
+    // Cambia la visibilidad del botón div
     var buttonDiv = document.getElementById("button-div");
     buttonDiv.style.display = "none";
   }
