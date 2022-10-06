@@ -38,7 +38,7 @@ AFRAME.registerComponent("markerhandler", {
       });
     });
 
-    // CAmbia el tamaño del modelo a su escala inicial
+    // Cambia el tamaño del modelo a su escala inicial
     var toy = toys.filter(toy => toy.id === markerId)[0];
 
     var model = document.querySelector(`#model-${toy.id}`);
